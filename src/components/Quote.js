@@ -1,8 +1,13 @@
-const Quote = () => {
+
+const Quote = ({quote}) => {
+    
     return ( 
-        <>
-            <h4>Quotes</h4>
-        </>
+        <article>
+            <h4>Quote </h4>
+            <p>{quote.data.quoteAuthor}</p>
+            <p>{quote.data.quoteText}</p>
+            
+        </article>
      );
 }
  
