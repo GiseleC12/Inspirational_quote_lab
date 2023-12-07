@@ -40,19 +40,19 @@ const QuoteForm = ({postNewQuote}) => {
         <div id="whole-form">
         <form id="quote-form" onSubmit={handleFormSubmit}>
             <h3 id="form-header">Add a new quote ✏️</h3>
-            <label htmlFor="quote-name" id="quote-name">Quotes:</label>
+            <label htmlFor="quote-name" id="quote-name">Quote:</label>
             <input 
                 id="body"
                 type="text"
-                placeholder="enter your quote here"
+                placeholder="enter quote here"
                 // onChange={handleChange}
                 />
             
-            <label htmlFor="author-name" id="author-name">Author Name:</label>
+            <label htmlFor="author-name" id="author-name">Author's Name:</label>
             <input
                 id="author"
                 type="text"
-                placeholder="enter the author:"
+                placeholder="enter name here"
                 // onChange={handleChange}
             />
 
