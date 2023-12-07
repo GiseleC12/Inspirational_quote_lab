@@ -37,6 +37,7 @@ const QuoteForm = ({postNewQuote}) => {
     }
 
     return ( 
+        <div id="whole-form">
         <form id="quote-form" onSubmit={handleFormSubmit}>
             <h3 id="form-header">Add a new quote ✏️</h3>
             <label htmlFor="quote-name" id="quote-name">Quotes:</label>
@@ -55,9 +56,10 @@ const QuoteForm = ({postNewQuote}) => {
                 // onChange={handleChange}
             />
 
-            <input type="submit" value="Add Quote"/>
+            <input type="submit" value="Add Quote" id ="button"/>
             
         </form>
+        </div>
             
      );
 }

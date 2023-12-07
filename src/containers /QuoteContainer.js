@@ -66,7 +66,7 @@ const QuoteContainer = () => {
         <>
             <RouterProvider router={quoteRoutes} />
             <div>
-            <img id ="image"src ="https://media.wired.co.uk/photos/606d9c5c6ab54fce4fbb1d4f/master/w_1600,c_limit/wired-wellness-9.jpg" alt="Inspirational quote " />
+            <img id ="image"src ="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1080/MTkzMDEwNDIzOTkyMTY1NTk3/inspirational-quote.webp" alt="Inspirational quote " />
             </div>
         </>
     

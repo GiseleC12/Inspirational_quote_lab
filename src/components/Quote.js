@@ -2,12 +2,13 @@
 const Quote = ({quote}) => {
     
     return ( 
-        <article>
+        <div id="individual-quote">
+        <article >
             <h4>Quote </h4>
             <p>{quote.quoteAuthor}</p>
             <p>{quote.quoteText}</p>
-            <button>Delete quote </button>
         </article>
+        </div>
      );
 }
  

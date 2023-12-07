@@ -4,6 +4,7 @@ text-align: center;
 color: blue;
 font-family:Arial, Helvetica, sans-serif;
 font-weight: bolder;
+font-size: 5em;
 
 
 }
@@ -13,11 +14,15 @@ font-weight: bolder;
   text-align: center;
   font-family:Arial, Helvetica, sans-serif;
   font-weight: bold;
+  margin-bottom: 70px;
+  font-size: 2em;
+  margin-bottom: 100px;
+ 
 }
 
 #image{
 
-width: 50%;
+width: 30%;
 height: auto;
 margin-left: auto;
 margin-right: auto;
@@ -29,8 +34,8 @@ margin-top: 50px;
 #navigation{
  display: flex;
  justify-content: space-between;
- margin-right: 400px;
- margin-left: 400px;
+ margin-right: 600px;
+ margin-left: 600px;
 font-size: medium;
 font-weight: bold;
 }
@@ -39,22 +44,99 @@ font-weight: bold;
   text-align: center;
   margin-bottom: 25px;
   color: blue;
+  font-size: 2em;
 }
 
 #author-name{
-  padding-left: 675px ;
+ margin-left: 20px;
   font-weight: bold;
   color: blue;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
 }
 
 #quote-name{
-  padding-left: 425px;
+ margin-right: 20px;
   font-weight: bold;
   color: blue;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-/* body {
-  background-color: rgb(186, 244, 250);
-  background-image: url('/Users/giselec12/BNTA/bnta_work/bnta_work/week_10/day_03/inspirational_quotes_lab/quotes_lab/beautiful-skyline-summer-season-colorful-purple-sky-cloud-sunset-morning-sunrise-good-day_43300-3787.avif')
-} */
+#author{
+  height: 40px;
+  width: 200px;
+  background-color: rgb(195, 236, 234);
+  margin: 0 auto
+}
 
+#body{
+  height: 40px;
+  width: 200px;
+  background-color: rgb(195, 236, 234);
+  margin: 0 auto
+ 
+}
+
+#quote-form{
+  border: 2px solid blue;
+  padding: 25px;
+  background-color: rgb(160, 230, 237);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+ 
+}
+
+#button{
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#whole-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  max-width: 300px;
+  margin: 0 auto; 
+  border-radius: 5px;
+
+}
+
+body {
+  /* background-color: rgb(186, 244, 250); */
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/sunset-quotes-647a64b7ad5dc.jpeg?crop=0.482xw:1.00xh;0.345xw,0&resize=980:*");
+  background-size: cover;
+  background-position: center;
+}
+
+#list-header{
+  color: rgb(92, 129, 196);
+  text-align: center;
+}
+
+#individual-quote{
+  display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+
+article {
+ 
+  margin: 10px; 
+  padding: 10px;
+  border: 1px solid #8d8d8d; 
+  width: calc(30% - 20px);
+  box-sizing: border-box;
+  background-color: rgb(160, 230, 237);
+  
+
+}
