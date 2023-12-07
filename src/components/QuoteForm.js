@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../App.css";
 
 const QuoteForm = ({postNewQuote}) => {
     const [stateQuote, setStateQuote] = useState({
@@ -37,8 +38,8 @@ const QuoteForm = ({postNewQuote}) => {
 
     return ( 
         <form id="quote-form" onSubmit={handleFormSubmit}>
-            <h3>Add a new quote</h3>
-            <label htmlFor="quote-name">Quotes:</label>
+            <h3 id="form-header">Add a new quote ✏️</h3>
+            <label htmlFor="quote-name" id="quote-name">Quotes:</label>
             <input 
                 id="body"
                 type="text"
@@ -46,7 +47,7 @@ const QuoteForm = ({postNewQuote}) => {
                 // onChange={handleChange}
                 />
             
-            <label htmlFor="author-name">Author Name:</label>
+            <label htmlFor="author-name" id="author-name">Author Name:</label>
             <input
                 id="author"
                 type="text"

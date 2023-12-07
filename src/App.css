@@ -33,6 +33,29 @@ margin-top: 50px;
  margin-left: 400px;
 font-size: medium;
 font-weight: bold;
+}
 
+#form-header{
+  text-align: center;
+  margin-bottom: 25px;
+  color: blue;
+}
+
+#author-name{
+  padding-left: 675px ;
+  font-weight: bold;
+  color: blue;
+}
+
+#quote-name{
+  padding-left: 425px;
+  font-weight: bold;
+  color: blue;
+}
+
+body {
+  background-color: rgb(186, 244, 250);
+  background-image: url('/Users/giselec12/BNTA/bnta_work/bnta_work/week_10/day_03/inspirational_quotes_lab/quotes_lab/beautiful-skyline-summer-season-colorful-purple-sky-cloud-sunset-morning-sunrise-good-day_43300-3787.avif')
 
 }
+
