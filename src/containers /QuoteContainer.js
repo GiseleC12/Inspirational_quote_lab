@@ -6,13 +6,19 @@ import { useState, useEffect } from "react";
 const QuoteContainer = () => {
 
     const[quotes, setQuotes]= useState([])
-    
-    
-    const fetchQuotes = async ()=> {
-        const response = await fetch ("https://quote-garden.onrender.com/api/v3/quotes")
+  
+
+    async function fetchQuotes() {
+        const response = await fetch("https://quote-garden.onrender.com/api/v3/quotes", {
+          headers: {
+            Authorization: 'Token token="bf5f5dfa2eeccf8f78f47ac940a9c406"',
+          },
+        });
+      
         const data = await response.json();
-        setQuotes(data);
-    }
+        setQuotes(data.data);
+      }
+
 
     useEffect (()=>{
         fetchQuotes();

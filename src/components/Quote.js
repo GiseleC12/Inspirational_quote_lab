@@ -4,9 +4,9 @@ const Quote = ({quote}) => {
     return ( 
         <article>
             <h4>Quote </h4>
-            <p>{quote.data.quoteAuthor}</p>
-            <p>{quote.data.quoteText}</p>
-            
+            <p>{quote.quoteAuthor}</p>
+            <p>{quote.quoteText}</p>
+            <button>Delete quote </button>
         </article>
      );
 }

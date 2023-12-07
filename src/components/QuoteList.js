@@ -2,8 +2,9 @@ import Quote from "./Quote";
 
 const QuoteList = ({quotes}) => {
     const quoteComponents = quotes.map((quote) => {
-        return <Quote key={quote.id} quotes={quote}/>
+        return <Quote key={quote._id} quote={quote}/>
     })
+   
 
     return ( 
         <>
