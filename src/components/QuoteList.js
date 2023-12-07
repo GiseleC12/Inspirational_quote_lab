@@ -5,7 +5,6 @@ const QuoteList = ({quotes}) => {
         return <Quote key={quote._id} quote={quote}/>
     })
    
-
     return ( 
         <>
             <h2>These are lists of random quotes</h2>
