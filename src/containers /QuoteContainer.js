@@ -1,6 +1,7 @@
 import QuoteForm from "../components/QuoteForm";
 import QuoteNavigation from "../components/QuoteNavigation";
 import QuoteList from "../components/QuoteList";
+import "../App.css";
 import { useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -32,13 +33,11 @@ const QuoteContainer = () => {
         setQuotes([...quotes, savedQuote]);  
      };
 
-        const data = await response.json();
-        setQuotes(data.data);
-      }
 
     useEffect (()=>{
         fetchQuotes();
     }, [])
+
 
     const quoteRoutes = createBrowserRouter ([
 
@@ -47,13 +46,13 @@ const QuoteContainer = () => {
             element: <QuoteNavigation />,
             children: [
                 {
-                    path: "/api/quotes",
+                    path: "/addQuotes",
                     element: <QuoteForm 
                             postNewQuote={postNewQuote}
                             />,
                 },
                 {
-                    path: "/api/quotes",
+                    path: "/allQuotes",
                     element: <QuoteList 
                                 quotes={quotes}
                                 />
@@ -66,9 +65,13 @@ const QuoteContainer = () => {
     return (  
         <>
             <RouterProvider router={quoteRoutes} />
+            <div>
+            <img id ="image"src ="https://media.wired.co.uk/photos/606d9c5c6ab54fce4fbb1d4f/master/w_1600,c_limit/wired-wellness-9.jpg" alt="Inspirational quote " />
+            </div>
         </>
     
     );
-}
+};
  
 export default QuoteContainer;
+    
