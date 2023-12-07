@@ -1,8 +1,8 @@
 import Quote from "./Quote";
 
-const QuoteList = ({quotes}) => {
+const QuoteList = ({quotes, deleteQuote}) => {
     const quoteComponents = quotes.map((quote) => {
-        return <Quote key={quote._id} quote={quote}/>
+        return <Quote key={quote._id} quote={quote} deleteQuote={deleteQuote}/>
     })
    
     return ( 
