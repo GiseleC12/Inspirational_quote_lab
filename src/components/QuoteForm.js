@@ -1,51 +1,57 @@
 import { useState } from "react";
 
 const QuoteForm = ({postNewQuote}) => {
-    const [stateQuote, setStateQuote] = useState(
-        {
-            name: "",
-            authorName: ""
+    const [stateQuote, setStateQuote] = useState({
+            quote: {
+                 body: "",
+                 author: ""
         }
-    )
+        })
 
 
-    const handleChange = (event) => {
-        let propertyName = event.target.name;
-        let copiedQuote = {...stateQuote};
-        copiedQuote[propertyName] = event.target.value;
-        setStateQuote(copiedQuote);
-    }
+    // const handleChange = (event) => {
+    //     let propertyName = event.target.value;
+    //     console.log(propertyName);
+    //     let copiedQuote = {...stateQuote};
+    //     copiedQuote[propertyName] = event.target.value;
+    //     setStateQuote(copiedQuote);
+    // }
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        postNewQuote(stateQuote);
+        const inputBody = event.target["body"].value;
+        const inputAuthor = event.target["author"].value;
+        const submitQuote = {
+            quote: {
+                 body: inputBody,
+                 author: inputAuthor
+        }
+        }
+        console.log(submitQuote);
+        postNewQuote(submitQuote);
         setStateQuote({
-           name: "",
-           authorName: "" 
+           body: "",
+           author: "" 
         })
     }
-
-
 
     return ( 
         <form id="quote-form" onSubmit={handleFormSubmit}>
             <h3>Add a new quote</h3>
             <label htmlFor="quote-name">Quotes:</label>
             <input 
-                id="quote-name"
-                name="name"
+                id="body"
                 type="text"
                 placeholder="enter your quote here"
-                onChange={handleChange}
+                // onChange={handleChange}
                 />
             
             <label htmlFor="author-name">Author Name:</label>
             <input
-                id="author-name"
-                name="authorName"
+                id="author"
                 type="text"
                 placeholder="enter the author:"
-                onChange={handleChange}
+                // onChange={handleChange}
             />
 
             <input type="submit" value="Add Quote"/>

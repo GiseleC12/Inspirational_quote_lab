@@ -14,14 +14,21 @@ const QuoteContainer = () => {
             Authorization: 'Token token="bf5f5dfa2eeccf8f78f47ac940a9c406"',
           },
         });
+        const data = await response.json();
+        setQuotes(data.data);
+      }
 
-    const postNewQuote = async (newQuote) => {
+     const postNewQuote = async (newQuote) => {
         const response = await fetch("https://favqs.com/api/quotes", {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
+            headers: {
+                Authorization: 'Token token="bf5f5dfa2eeccf8f78f47ac940a9c406"',
+                "Content-Type": "application/json",
+              },
             body: JSON.stringify(newQuote)
         }); 
         const savedQuote = await response.json();
+
         setQuotes([...quotes, savedQuote]);  
      };
 
@@ -55,7 +62,7 @@ const QuoteContainer = () => {
         }
     ])
     
-    
+
     return (  
         <>
             <RouterProvider router={quoteRoutes} />
