@@ -7,7 +7,7 @@ const QuoteList = ({quotes}) => {
    
     return ( 
         <>
-            <h2 id="list-header">These are lists of random quotes</h2>
+            <h2 id="list-header">List of Random Quotes</h2>
             {quoteComponents}
         </>
      );
