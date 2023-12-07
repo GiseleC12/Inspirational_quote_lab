@@ -33,6 +33,14 @@ const QuoteContainer = () => {
         setQuotes([...quotes, savedQuote]);  
      };
 
+     const deleteQuote = async (quoteId) => {
+        await fetch(`https://favqs.com/api/quotes/${quoteId}`, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"}
+        })
+        setQuotes(quotes.filter((quote) => quote.id !== quoteId))
+     }
+
 
     useEffect (()=>{
         fetchQuotes();
@@ -55,6 +63,7 @@ const QuoteContainer = () => {
                     path: "/allQuotes",
                     element: <QuoteList 
                                 quotes={quotes}
+                                deleteQuote={deleteQuote}
                                 />
                 },
             ]

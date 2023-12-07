@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Quote = ({quote, deleteQuote}) => {
 
     const handleDeleteButton = () => {
@@ -13,7 +15,7 @@ const Quote = ({quote, deleteQuote}) => {
             <button onClick={handleDeleteButton}>Delete</button>
         </article>
         </div>
-     );
+    );
 }
  
 export default Quote;
