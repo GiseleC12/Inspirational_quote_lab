@@ -185,3 +185,7 @@ article {
   font-weight: bold;
 
 }
+::placeholder {
+  text-align: center;
+  line-height: inherit;
+}
