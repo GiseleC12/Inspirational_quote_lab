@@ -9,10 +9,9 @@ const Quote = ({quote, deleteQuote}) => {
     return ( 
         <div id="individual-quote">
         <article >
-            <h4>Quote </h4>
             <p>{quote.quoteAuthor}</p>
             <p>{quote.quoteText}</p>
-            <button onClick={handleDeleteButton}>Delete</button>
+            <button onClick={handleDeleteButton} id="delete-button">Delete</button>
         </article>
         </div>
     );
